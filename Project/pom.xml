@@ -17,18 +17,27 @@
     <maven.compiler.target>11</maven.compiler.target>
 </properties>
 
-<dependencies>
-    <dependency>
+
+  <dependency>
         <groupId>jakarta.servlet</groupId>
         <artifactId>jakarta.servlet-api</artifactId>
         <version>5.0.0</version>
         <scope>provided</scope>
     </dependency>
 
+    <!-- Jakarta Faces (Mojarra) -->
     <dependency>
         <groupId>org.glassfish</groupId>
         <artifactId>jakarta.faces</artifactId>
         <version>3.0.0</version>
+    </dependency>
+
+    <!-- Jakarta CDI -->
+    <dependency>
+        <groupId>jakarta.enterprise</groupId>
+        <artifactId>jakarta.enterprise.cdi-api</artifactId>
+        <version>3.0.0</version>
+        <scope>provided</scope>
     </dependency>
 </dependencies>
 
