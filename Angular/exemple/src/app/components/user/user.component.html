@@ -1,7 +1,11 @@
 <div class="card">
-	<h1>Utilisateur</h1>
+	<h1>{{user.prenom}}</h1>
 	<img [src]="user.pp" alt="avatar">
-	<p>{{user.prenom}}</p>
 	<p>{{user.nom}}</p>
 	<p>{{user.age}}</p>
+	<p>{{user.connected}}</p>
+
+	<button (click)="emitAdd()">Ajouter</button>
+	<button *ngIf="user.connected" (click)="disconnect()">Déconnecter</button>
+	<button *ngIf="!user.connected" (click)="connect()">Connect</button>
 </div>

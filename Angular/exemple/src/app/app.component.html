@@ -1,4 +1,18 @@
 <h1 class="PremierTitre">Je suis le titre de ma page</h1>
-<div class="liste">
-	<app-user *ngFor="let user of this.users" [user]="user"></app-user>
+<div>
+	<h3>Liste de tous les utilisateurs :</h3>
+	<div class="Liste">
+		<div *ngFor="let user of this.users">
+			<app-user [user]="user" (add)="this.addFriend()"></app-user>
+		</div>
+	</div>
+
+
+	<h3>Liste de mes amis</h3>
+	<div class="Liste">
+
+		<div *ngFor="let user of this.amis">
+			<app-user [user]="user"></app-user>
+		</div>
+	</div>
 </div>
