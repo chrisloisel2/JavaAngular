@@ -1,0 +1,12 @@
+.PremierTitre{
+	/* Couleur de la balise */
+	color: red;
+	/* Couleur de l'arriere plan */
+	background-color: yellow;
+	/* Taille de l'ecriture */
+	font-size: 20px;
+	/* Taille de la marge Interieur */
+	padding: 30px;
+	/* Taille de la marge exterieur */
+	margin: 30px;
+}
