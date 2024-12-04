@@ -31,7 +31,7 @@ export class UserComponent {
 	}
 
 	emitAdd() {
-		this.add.emit();
+		this.add.emit(this.user);
 	}
 
 }
