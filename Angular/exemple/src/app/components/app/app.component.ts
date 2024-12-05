@@ -12,23 +12,10 @@ import { HttpClient } from '@angular/common/http';
 @Component({
 	// Selector: Nom de la balise HTML
 	selector: 'app-root',
-	imports: [UserComponent, CommonModule, FormComponent],
+	imports: [RouterOutlet],
 	templateUrl: './app.component.html',
 	styleUrl: './app.component.css'
 })
 export class AppComponent {
-	constructor(public userService: UserService, public http: HttpClient) {
-	}
 
-
-	apiCall() {
-		let obs = this.http.get("https://api.chucknorris.io/jokes/random")
-
-		obs.subscribe(
-			(response: any) => {
-				console.log(response.value);
-			}
-		);
-
-	}
 }
