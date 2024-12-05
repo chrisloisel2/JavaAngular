@@ -5,7 +5,7 @@
 	<p>{{user.age}}</p>
 	<p>{{user.connected}}</p>
 
-	<button (click)="emitAdd()">Ajouter</button>
+	<button [hidden]="user.age > 25" (click)="emitAdd()">Ajouter</button>
 	<button *ngIf="user.connected" (click)="disconnect()">Déconnecter</button>
 	<button *ngIf="!user.connected" (click)="connect()">Connect</button>
 </div>

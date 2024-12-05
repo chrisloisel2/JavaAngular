@@ -1,16 +1,20 @@
 <h1 class="PremierTitre">Je suis le titre de ma page</h1>
 <h3>Liste de tous les utilisateurs :</h3>
+
+<h2>Recherche d'un Utilisateur</h2>
+<app-form></app-form>
+
 <div class="Liste">
 	<div *ngFor="let user of this.userService.users">
 		<app-user [user]="user" (add)="this.userService.addFriend($event)"></app-user>
 	</div>
 
 
-	<h3>Liste de mes amis</h3>
+	<!-- <h3>Liste de mes amis</h3>
 	<div class="Liste">
 
 		<div *ngFor="let user of this.userService.amis">
 			<app-user [user]="user"></app-user>
 		</div>
-	</div>
+	</div> -->
 </div>
