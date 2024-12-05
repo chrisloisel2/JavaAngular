@@ -7,6 +7,11 @@ export class UserService {
 
 	constructor() { }
 
+
+	// Modifier par le composant form
+	filterName: string = '';
+
+
 	users: any = [{
 		age: 25,
 		nom: 'Loisel',
@@ -42,4 +47,33 @@ export class UserService {
 
 		console.log('Voici le user passé par mon evenement Add', user);
 	}
+
+	// Fonction fléchée
+	// (arguments) => { instructions }
+
+	// Si ma fonction fléchée a Un seul paramètre, je opeux retirer les parenthèses
+	// Si ma fonction fléchée a Un seul return, je peux retirer les accolades
+	// x => x / 2
+
+	// this.users = [1, 2, 3, 4, 5]
+	//
+
+	get filteredUsers() {
+		// filtre les utilisateurs en fonction de la valeur de filterName
+		return this.users.filter((user: any) => {
+			return user.nom.toLowerCase().includes(this.filterName.toLowerCase()) || user.prenom.toLowerCase().includes(this.filterName.toLowerCase())
+		}
+		)
+	}
+
+
+	// filteredUser(user: any) {
+	// 	return user.nom.toLowerCase().includes(this.filterName.toLowerCase())
+	// }
+
+
+	// get filteredUsers() {
+	// 	return this.users.filter(this.filteredUser);
+	// }
+
 }

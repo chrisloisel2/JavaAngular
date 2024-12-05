@@ -5,7 +5,7 @@
 <app-form></app-form>
 
 <div class="Liste">
-	<div *ngFor="let user of this.userService.users">
+	<div *ngFor="let user of this.userService.filteredUsers">
 		<app-user [user]="user" (add)="this.userService.addFriend($event)"></app-user>
 	</div>
 

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { UserService } from '../../services/user.service';
 
 @Component({
 	selector: 'app-form',
@@ -8,7 +9,6 @@ import { FormsModule } from '@angular/forms';
 	styleUrl: './form.component.css'
 })
 export class FormComponent {
-
-	username: string = '';
-
+	constructor(public userService: UserService) {
+	}
 }
